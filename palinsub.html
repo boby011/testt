@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest Palindromic Substring in s</title>
+</head>
+<body>
+    <script>
+        let s = "momalayalam";
+        let longestPalindrome = "";
+
+        for (let i = 0; i < s.length; i++) {
+            for (let j = i; j < s.length; j++) {
+                let substring = s.substring(i, j + 1);
+                let reversed = substring.split('').reverse().join('');
+                
+                if (substring === reversed && substring.length > longestPalindrome.length) {
+                    longestPalindrome = substring;
+                }
+            }
+        }
+
+        document.write("Output: " + longestPalindrome);
+    </script>
+</body>
+</html>

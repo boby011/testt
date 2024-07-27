@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest Palindromic substring in s</title>
+</head>
+<body>
+    <script>
+       
+        let s = "babad";
+        
+        // for(i=0;i<s.length;i++){
+        //     let a=i+1;
+        //     let b=i-1;
+        // }
+        // document.write(s[a]);
+        // while(a<=s.length&&s[a]==s[i]){
+        //     a++
+        // }
+        // while(b<=s.length&&s[b]==s[i]){
+        //     b--
+        // }
+        let trim = s.substring(1, s.length - 1); 
+
+        let rev = trim.split('').reverse().join('');
+        document.write("output: " + rev);
+  
+        
+
+    </script>
+</body>
+</html>
